@@ -1,10 +1,28 @@
-
+import { BrowserRouter } from "react-router-dom";
+import{About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarCanvas} from './components/components';
 
 const App =()  =>{
 
 
   return (
-      <div>Rudiga 3D Portfolio</div>
+    <BrowserRouter>
+    <div className="relative z-0 bg-black">
+      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <Navbar/>
+        <Hero/>
+      </div>
+      <About/>
+      <Experience/>
+      <Tech/>
+      <Works/>
+      <Feedbacks/>
+      <div className="relative z-0">
+        <Contact/>
+        <StarCanvas/>
+      </div>
+
+    </div>
+    </BrowserRouter>
   )
 }
 
